@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "748913917363",
+    "project_id": "qthrift-6563a",
+    "storage_bucket": "qthrift-6563a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748913917363:android:926ff109540e2605a95fc6",
+        "android_client_info": {
+          "package_name": "com.example.qthrift"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAW1-v3wRu8CGaXv-wS7CjZ67TTqGtXKHU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

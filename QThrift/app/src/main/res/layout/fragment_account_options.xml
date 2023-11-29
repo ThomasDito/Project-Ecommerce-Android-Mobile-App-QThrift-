@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/blury_background"
+        android:scaleType="centerCrop"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/logo"
+            style="@style/h3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/logo"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLogoLeft"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineLogoRight"
+            app:layout_constraintTop_toTopOf="@+id/guidelineLogoTop"
+            app:layout_constraintBottom_toBottomOf="@+id/guidelineLogoBottom"/>
+
+        <TextView
+            android:id="@+id/tvTagLogo"
+            style="@style/h4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:text="@string/TagLogo"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="35sp"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineLogoBottom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvTagLine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/h2"
+            app:layout_constraintStart_toStartOf="@+id/tvTagLogo"
+            app:layout_constraintEnd_toEndOf="@+id/tvTagLogo"
+            app:layout_constraintTop_toBottomOf="@+id/tvTagLogo"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:text="@string/TagLine"
+            android:layout_marginTop="15dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonRegisterAccountOptions"
+            android:layout_width="@dimen/mediumButtonWidth"
+            android:layout_height="@dimen/mediumButtonHeight"
+            style="@style/blueButtonStyle"
+            app:layout_constraintTop_toBottomOf="@+id/tvTagLine"
+            app:layout_constraintStart_toStartOf="@+id/tvTagLine"
+            app:layout_constraintEnd_toEndOf="@+id/tvTagLine"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="Register"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonLoginAccountOptions"
+            android:layout_width="@dimen/mediumButtonWidth"
+            android:layout_height="@dimen/mediumButtonHeight"
+            style="@style/whiteButtonStyle"
+            app:layout_constraintTop_toBottomOf="@+id/buttonRegisterAccountOptions"
+            app:layout_constraintStart_toStartOf="@+id/tvTagLine"
+            app:layout_constraintEnd_toEndOf="@+id/tvTagLine"
+            android:text="Login"
+            android:layout_marginTop="10dp"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLogoLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLogoRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLogoTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.14" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLogoBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.38" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
