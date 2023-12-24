@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -13,8 +12,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="ExtraText">
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/logo"
@@ -24,6 +22,7 @@
             android:src="@drawable/logo"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineLoginRight"
             app:layout_constraintTop_toTopOf="@+id/guidelineLogoTop"/>
 
         <TextView
@@ -36,7 +35,8 @@
             android:textAlignment="center"
             android:textSize="35sp"
             app:layout_constraintTop_toBottomOf="@+id/logo"
-            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"/>
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineLoginRight"/>
 
         <TextView
             android:id="@+id/tvDontHaveAccount"
@@ -44,6 +44,7 @@
             android:layout_height="wrap_content"
             style="@style/h2"
             app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineLoginRight"
             app:layout_constraintTop_toBottomOf="@+id/tvLetsLogin"
             android:textAlignment="center"
             android:gravity="center"
@@ -121,7 +122,7 @@
             app:layout_constraintBottom_toBottomOf="@id/googleLogin"
             app:layout_constraintEnd_toEndOf="@id/googleLogin"/>
 
-        <androidx.appcompat.widget.AppCompatButton
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/buttonLoginLogin"
             android:layout_width="0dp"
             android:layout_height="@dimen/mediumButtonHeight"
@@ -130,7 +131,8 @@
             app:layout_constraintStart_toStartOf="@+id/guidelineLoginLeft"
             app:layout_constraintEnd_toEndOf="@+id/guidelineLoginRight"
             android:layout_marginTop="15dp"
-            android:text="Login"/>
+            android:text="Login"
+            app:spinning_bar_color="@color/white"/>
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineLoginLeft"
@@ -146,7 +148,7 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.91" />
 
-        //guide line for logo, logoname, tagline
+
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineLogoLeft"
             android:layout_width="wrap_content"
@@ -174,7 +176,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.38" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </FrameLayout>
